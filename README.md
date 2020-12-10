@@ -35,21 +35,19 @@ There are multiple possible knowledge bases for each puzzle that will compute th
 For instance, for Puzzle 0, setting `knowledge0 = AKnave` would result in correct output, since through our own reasoning we know 'A' must be a knave. But doing so would be against the spirit of this problem: the goal is to have our AI do the reasoning for us.
 
 ## Resources
-* [Search - Lecture 0 - CS50's Introduction to Artificial Intelligence with Python 2020][cs50 lecture]
+* [Knowledge - Lecture 1 - CS50's Introduction to Artificial Intelligence with Python 2020][cs50 lecture]
 
 ## Usage
 
-**To find how many “degrees of separation” apart two actors are:** 
+**To solve logic puzzles:** 
 
-* Inside the `degrees` directory: `python degrees.py [csv]`
+* Inside the `knights` directory: `python puzzle.py`
 
 ## Credits
 [*Luis Sanchez*][linkedin] 2020.
 
 Project and images from the course [CS50's Introduction to Artificial Intelligence with Python 2020][cs50 ai] from HarvardX.
 
-[kevin]: https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon
-[imdb]: https://www.imdb.com/
-[cs50 lecture]: https://www.youtube.com/watch?v=D5aJNFWsWew&feature=youtu.be
+[cs50 lecture]: https://www.youtube.com/watch?v=LucW-p6zC5c&feature=youtu.be
 [linkedin]: https://www.linkedin.com/in/luis-sanchez-13bb3b189/
 [cs50 ai]: https://cs50.harvard.edu/ai/2020/
