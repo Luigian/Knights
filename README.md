@@ -14,13 +14,13 @@ With more characters and more sentences, the puzzles can get trickier. The task 
 
 ## Knowledge in AI
 
-Humans reason based on existing knowledge and draw conclusions. The concept of representing knowledge and drawing conclusions from it is also used in AI. *Knowledge-Based Agents* reason by operating on internal representations of knowledge. AI stores knowledge in a *Sentence* (an assertion about the world in a knowledge representation language)  and uses it to infer new information.
+Humans reason based on existing knowledge and draw conclusions. The concept of representing knowledge and drawing conclusions from it is also used in AI. Knowledge-Based Agents reason by operating on internal representations of knowledge. AI stores knowledge in a *Sentence* (an assertion about the world in a knowledge representation language)  and uses it to infer new information.
 
 **Propositional Logic**
 
-Propositional logic is based on propositions, statements about the world that can be either true or false. It uses *propositional symbols* like letters (P, Q, R) to represent a proposition.
+Propositional logic is based on propositions, statements about the world that can be either true or false. It uses propositional symbols like letters (*P*, *Q*, *R*) to represent a proposition.
 
-To connect propositional symbols in order to reason in a more complex way it uses other logical symbols called *logical connectives*:
+To connect propositional symbols in order to reason in a more complex way it uses other logical symbols known as logical connectives:
 
 - **Not (¬)** inverses the truth value of the proposition.
 
@@ -28,9 +28,9 @@ To connect propositional symbols in order to reason in a more complex way it use
 
 - **Or (∨)** is true as as long as either of its arguments is true.
 
-- **Implication (→)** represents a structure of "if P then Q". P is called the antecedent and Q is called the consequent.
+- **Implication (→)** represents a structure of "if *P* then *Q*". *P* is called the antecedent and *Q* is called the consequent.
 
-- **Biconditional (↔)** is an implication that goes both directions. Can be read as "if and only if". P ↔ Q is the same as P → Q and Q → P taken together.
+- **Biconditional (↔)** is an implication that goes both directions. Can be read as "if and only if". *P* ↔ *Q* is the same as *P* → *Q* and *Q* → *P* taken together.
 
 
 
