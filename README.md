@@ -12,6 +12,29 @@ The objective of the puzzle is, given a set of sentences spoken by each of the c
 
 With more characters and more sentences, the puzzles can get trickier. The task in this project is to determine how to represent these puzzles using **propositional logic**, such that an AI running a **model-checking** algorithm could solve these puzzles for us.
 
+## Knowledge in AI
+
+Humans reason based on existing knowledge and draw conclusions. The concept of representing knowledge and drawing conclusions from it is also used in AI. *Knowledge-Based Agents* reason by operating on internal representations of knowledge. AI stores knowledge in a *Sentence* (an assertion about the world in a knowledge representation language)  and uses it to infer new information.
+
+**Propositional Logic**
+
+Propositional logic is based on propositions, statements about the world that can be either true or false. It uses *propositional symbols* like letters (P, Q, R) to represent a proposition.
+
+To connect propositional symbols in order to reason in a more complex way it uses other logical symbols called *logical connectives*:
+
+- **Not (¬)** inverses the truth value of the proposition.
+
+- **And (∧)** is true only in the case that both arguments are true.
+
+- **Or (∨)** is true as as long as either of its arguments is true.
+
+- **Implication (→)** represents a structure of "if P then Q". P is called the antecedent and Q is called the consequent.
+
+- **Biconditional (↔)** is an implication that goes both directions. Can be read as "if and only if". P ↔ Q is the same as P → Q and Q → P taken together.
+
+
+
+
 ## Implementation
 
 At `logic.py`, we define several classes for different types of logical connectives. These classes can be composed within each other, so an expression like `And(Not(A), Or(B, C))` represents the logical sentence stating that symbol `A` is not true, and that symbol `B` or symbol `C` is true (where “or” here refers to inclusive, not exclusive, or).
@@ -24,7 +47,7 @@ What follows are four different knowledge bases, `knowledge0`, `knowledge1`, `kn
 
 The `main` function of this `puzzle.py` loops over all puzzles, and uses model checking to compute, given the knowledge for that puzzle, whether each character is a knight or a knave, printing out any conclusions that the model checking algorithm is able to make.
 
-### Representing the puzzles using propositional logic
+**Representing the puzzles using propositional logic**
 
 For each knowledge base, we want to encode two different types of information: (1) information about the structure of the problem itself (i.e., information given in the definition of a Knight and Knave puzzle), and (2) information about what the characters actually said.
 
