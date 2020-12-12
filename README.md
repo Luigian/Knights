@@ -73,6 +73,8 @@ The `main` function of this `puzzle.py` loops over all puzzles, and uses model c
 
 **Representing the puzzles using propositional logic**
 
+Knowledge engineering is the process of figuring out how to represent propositions and logic in AI.
+
 For each knowledge base, we want to encode two different types of information: (1) information about the structure of the problem itself (i.e., information given in the definition of a Knight and Knave puzzle), and (2) information about what the characters actually said.
 
 Considering what it means if a sentence is spoken by a character. Under what conditions is that sentence true? Under what conditions is that sentence false? How can we express that as a logical sentence?
