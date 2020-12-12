@@ -32,14 +32,38 @@ To connect propositional symbols in order to reason in a more complex way it use
 
 - **Biconditional (↔)** is an implication that goes both directions. Can be read as "if and only if". *P* ↔ *Q* is the same as *P* → *Q* and *Q* → *P* taken together.
 
+**Model Checking**
 
+A *model* is an assignment of a truth value to every proposition. Knowledge about the world is represented in the truth values of these propositions. The model is the truth-value assignment that provides information about the world.
 
+There could be more than one possible models. In fact, the number of possible models is 2 to the power of the number of propositions. If we have 2 propositions, that will be 2² = 4 possible models.
+
+The knowledge base (KB) is a set of sentences known by a knowledge-based agent. This is knowledge that the AI is provided about the world in the form of propositional logic sentences that can be used to make additional inferences about the world.
+
+Entailment is represented by the symbol (⊨). If *α* ⊨ *β* (*α* entails *β*), then in any world where *α* is true, *β* is true, too. Entailment is different from implication. Implication is a logical connective between two propositions. Entailment, on the other hand, is a relation that means that if all the information in *α* is true, then all the information in *β* is true.
+
+Inference is the process of deriving new sentences from old ones. There are multiple ways to infer new knowledge based on existing knowledge. One of these ways is the Model Checking algorithm.
+
+To determine if KB ⊨ *α* (in other words, answering the question: “can we conclude that *α* is true based on our knowledge base”):
+- Enumerate all possible models.
+- If in every model where KB is true, *α* is true as well, then KB entails *α* (KB ⊨ *α*).
+
+To run the Model Checking algorithm, the following information is needed:
+
+- Knowledge Base, which will be used to draw inferences.
+- A query, or the proposition that we are interested in whether it is entailed by the KB.
+- Symbols, a list of all the symbols used.
+- Model, an assignment of truth and false values to symbols.
+
+We are interested only in the models where the KB is true. If the KB is false, then the conditions that we know to be true are not occurring in these models, making them irrelevant to our case.
 
 ## Implementation
 
 At `logic.py`, we define several classes for different types of logical connectives. These classes can be composed within each other, so an expression like `And(Not(A), Or(B, C))` represents the logical sentence stating that symbol `A` is not true, and that symbol `B` or symbol `C` is true (where “or” here refers to inclusive, not exclusive, or).
 
-`logic.py` also contains a function `model_check`. `model_check` takes a knowledge base and a query. The knowledge base is a single logical sentence: if multiple logical sentences are known, they can be joined together in an `And` expression. `model_check` recursively considers all possible models, and returns `True` if the knowledge base entails the query, and returns `False` otherwise.
+`logic.py` also contains a function `model_check`. `model_check` takes a knowledge base and a query. The knowledge base is a single logical sentence: if multiple logical sentences are known, they can be joined together in an `And` expression. `model_check` recursively considers all possible models using the `check_all` function, and returns `True` if the knowledge base entails the query, and returns `False` otherwise.
+
+As mentioned, the way the `check_all` function works is recursive. That is, it picks one symbol, creates two models, in one of which the symbol is true and in the other the symbol is false, and then calls itself again, now with two models that differ by the truth assignment of this symbol. The function will keep doing so until all symbols will have been assigned truth-values in the models, leaving the list `symbols` empty. Once it is empty (as identified by the line `if not symbols`), in each instance of the function (wherein each instance holds a different model), the function checks whether the KB is true given the model. If the KB is true in this model, the function checks whether the query is true, as described earlier.
 
 At `puzzle.py`, we define six propositional symbols. `AKnight`, for example, represents the sentence that “A is a knight”, while `AKnave` represents the sentence that “A is a knave.” We similarly define propositional symbols for characters B and C as well.
 
