@@ -55,7 +55,7 @@ To run the Model Checking algorithm, the following information is needed:
 - Symbols, a list of all the symbols used.
 - Model, an assignment of truth and false values to symbols.
 
-<img src="resources/model-checking.jpg" width="1000">
+<img src="resources/model-checking.jpg" width="800">
 
 Normally, we are interested only in the models where the KB is true. If the KB is false, then the conditions that we know to be true are not occurring in these models, making them irrelevant to our case.
 
