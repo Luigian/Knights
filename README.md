@@ -28,7 +28,7 @@ To connect propositional symbols in order to reason in a more complex way it use
 
 - **Or (∨)** is true as as long as either of its arguments is true.
 
-- **Implication (→)** represents a structure of "if *P* then *Q*". *P* is called the antecedent and *Q* is called the consequent.
+- **Implication (→)** represents a structure of "if *P* then *Q*". *P* is called the 'antecedent' and *Q* is called the 'consequent'.
 
 - **Biconditional (↔)** is an implication that goes both directions. Can be read as "if and only if". *P* ↔ *Q* is the same as *P* → *Q* and *Q* → *P* taken together.
 
@@ -55,7 +55,9 @@ To run the Model Checking algorithm, the following information is needed:
 - Symbols, a list of all the symbols used.
 - Model, an assignment of truth and false values to symbols.
 
-We are interested only in the models where the KB is true. If the KB is false, then the conditions that we know to be true are not occurring in these models, making them irrelevant to our case.
+<img src="resources/model-checking.jpg" width="1000">
+
+Normally, we are interested only in the models where the KB is true. If the KB is false, then the conditions that we know to be true are not occurring in these models, making them irrelevant to our case.
 
 ## Implementation
 
