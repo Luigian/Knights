@@ -10,6 +10,8 @@ In a Knights and Knaves puzzle, the following information is given: Each charact
 
 The objective of the puzzle is, given a set of sentences spoken by each of the characters, determine, for each character, whether that character is a knight or a knave.
 
+<img src="resources/model-checking.jpg" width="800">
+
 With more characters and more sentences, the puzzles can get trickier. The task in this project is to determine how to represent these puzzles using **propositional logic**, such that an AI running a **model-checking** algorithm could solve these puzzles for us.
 
 ## Knowledge in AI
@@ -55,9 +57,7 @@ To run the Model Checking algorithm, the following information is needed:
 - Symbols, a list of all the symbols used.
 - Model, an assignment of truth and false values to symbols.
 
-<img src="resources/model-checking.jpg" width="800">
-
-Normally, we are interested only in the models where the KB is true. If the KB is false, then the conditions that we know to be true are not occurring in these models, making them irrelevant to our case.
+We are interested only in the models where the KB is true. If the KB is false, then the conditions that we know to be true are not occurring in these models, making them irrelevant to our case.
 
 ## Implementation
 
@@ -97,7 +97,7 @@ For instance, for Puzzle 0, setting `knowledge0 = AKnave` would result in correc
 ## Credits
 [*Luis Sanchez*][linkedin] 2020.
 
-Project and images from the course [CS50's Introduction to Artificial Intelligence with Python 2020][cs50 ai] from HarvardX.
+Project from the course [CS50's Introduction to Artificial Intelligence with Python 2020][cs50 ai] from HarvardX.
 
 [cs50 lecture]: https://www.youtube.com/watch?v=LucW-p6zC5c&feature=youtu.be
 [linkedin]: https://www.linkedin.com/in/luis-sanchez-13bb3b189/
