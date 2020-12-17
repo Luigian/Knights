@@ -10,7 +10,7 @@ In a Knights and Knaves puzzle, the following information is given: Each charact
 
 The objective of the puzzle is, given a set of sentences spoken by each of the characters, determine, for each character, whether that character is a knight or a knave.
 
-<img src="resources/model-checking.jpg" width="700">
+<img src="resources/puzzle.jpg" width="700">
 
 With more characters and more sentences, the puzzles can get trickier. The task in this project is to determine how to represent these puzzles using **propositional logic**, such that an AI running a **model-checking** algorithm could solve these puzzles for us.
 
